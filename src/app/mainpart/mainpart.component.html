@@ -1,0 +1,23 @@
+<div class="card" *ngIf="datatomain.name">
+    <div class="card-header">
+        {{datatomain.name}}
+    </div>
+    <div class="card-body">
+        <div class="d-flex">
+            <h3>Name:</h3>
+            <h3>{{datatomain.name}}</h3>
+        </div>
+        <div>
+            <h5>Status:</h5>
+            <h5>{{datatomain.status}}</h5>
+        </div>
+        Change status to
+        <button>
+            <span style="cursor: pointer;" (click)="changeStat('Offline')"
+                *ngIf="datatomain.status=='Online'">Offline</span>
+            <span style="cursor: pointer;" (click)="changeStat('Online')"
+                *ngIf="datatomain.status=='Offline'">Online</span>
+        </button>
+    </div>
+
+</div>

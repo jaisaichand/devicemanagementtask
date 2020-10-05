@@ -1,0 +1,10 @@
+<div>
+    <ul class="list-group">
+        <li *ngFor="let device of deviceslist; let in = index" class="d-flex list-group-item p-1"
+            style="cursor: pointer;" (click)="openToRight(in)">
+            <div style="flex: 8;">{{device.name}}</div>
+            <div style="flex: 1;" [ngClass]="(device.status=='Online')?'online':'offline'">
+                <small>{{device.status}}</small></div>
+        </li>
+    </ul>
+</div>

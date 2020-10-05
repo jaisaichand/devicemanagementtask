@@ -1,0 +1,20 @@
+<div *ngIf="loggedIn==false" class="w-100 d-flex justify-content-center">
+  <div class="w-75">
+    <input type="text" [(ngModel)]="enteredName" class="w-100" placeholder="Enter Your name">
+    <button class="btn btn-outline-success w-100" (click)="login()">Login</button>
+  </div>
+</div>
+
+
+<div *ngIf="loggedIn==true" style="width: 100vw; height: 100vh;" class="row ">
+  <div class="col-md-12">
+    <h3 class="text-center">{{username}}</h3>
+  </div>
+  <div class="col-md-3">
+    <div>Devices List</div>
+    <app-leftbar [deviceslist]="deviceslist" (clickeddata)="clickedd($event)"></app-leftbar>
+  </div>
+  <div class="col-md-9">
+    <app-mainpart (changeTrigger)="changeTo($event)" [datatomain]="datatomain"></app-mainpart>
+  </div>
+</div>

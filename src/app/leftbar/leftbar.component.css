@@ -1,0 +1,11 @@
+.online {
+  background: rgb(13, 207, 13);
+  border-radius: 10px;
+  color: white;
+}
+
+.offline {
+  border-radius: 10px;
+  background: rgb(230, 50, 86);
+  color: white;
+}
